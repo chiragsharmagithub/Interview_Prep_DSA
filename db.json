@@ -1,0 +1,34 @@
+{
+  "blind75": [
+    {
+      "id": 1,
+      "name": "Two Sum",
+      "category": "Array",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "name": "Best Time to Buy and Sell Stock",
+      "category": "Array",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "name": "Contains Duplicate",
+      "category": "Array",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "name": "Product of Array Except Self",
+      "category": "Array",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "name": "Maximum Subarray",
+      "category": "Array",
+      "link": ""
+    }
+  ]
+}
