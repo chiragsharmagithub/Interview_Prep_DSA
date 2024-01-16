@@ -16,6 +16,9 @@ import { QuestionsService } from '../Services/questions.service';
 export class QuestionsListComponent implements OnInit {
   DSAQuestions: DSAQues[] = [];
 
+  current_completed_questions = 0;
+  total_user_questions = 75;
+  
   constructor(private questionsService: QuestionsService) {
 
   }
