@@ -15,6 +15,8 @@ import { QuestionsService } from '../Services/questions.service';
 })
 export class QuestionsListComponent implements OnInit {
   DSAQuestions: DSAQues[] = [];
+  category_questions : any;
+  showQuestionOfCategory: number = 0;
 
   current_completed_questions = 0;
   total_user_questions = 75;
@@ -23,8 +25,31 @@ export class QuestionsListComponent implements OnInit {
 
   }
 
+  showQuesOfCategory(id: number) {
+    this.showQuestionOfCategory = id;
+    console.log("Show questions of category " + this.showQuestionOfCategory);
+  }
+
+  categoryQuesToShow() {
+    return this.showQuestionOfCategory;
+  }
+
   ngOnInit() {
     this.getQuestions();
+    this.getCategoryQues();
+  }
+
+  getCategoryQues() {
+    this.questionsService.getCategoryQuestions()
+        .subscribe(
+          (data) => {
+            this.category_questions = data;
+          },
+          (error) => {
+            console.log("Some error occurred.");
+            console.log(error);
+          }
+        )
   }
 
   getQuestions() {

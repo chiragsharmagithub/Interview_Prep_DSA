@@ -1,34 +1,153 @@
 {
-  "blind75": [
-    {
-      "id": 1,
-      "name": "Two Sum",
-      "category": "Array",
-      "link": ""
-    },
-    {
-      "id": 2,
-      "name": "Best Time to Buy and Sell Stock",
-      "category": "Array",
-      "link": ""
-    },
-    {
-      "id": 3,
-      "name": "Contains Duplicate",
-      "category": "Array",
-      "link": ""
-    },
-    {
-      "id": 4,
-      "name": "Product of Array Except Self",
-      "category": "Array",
-      "link": ""
-    },
-    {
-      "id": 5,
-      "name": "Maximum Subarray",
-      "category": "Array",
-      "link": ""
-    }
-  ]
+	"blind75": [
+		{
+			"id": 1,
+			"name": "Two Sum",
+			"category": "Array",
+			"link": ""
+		},
+		{
+			"id": 2,
+			"name": "Best Time to Buy and Sell Stock",
+			"category": "Array",
+			"link": ""
+		},
+		{
+			"id": 3,
+			"name": "Contains Duplicate",
+			"category": "Array",
+			"link": ""
+		},
+		{
+			"id": 4,
+			"name": "Product of Array Except Self",
+			"category": "Array",
+			"link": ""
+		},
+		{
+			"id": 5,
+			"name": "Maximum Subarray",
+			"category": "Array",
+			"link": ""
+		}
+	],
+
+	"questionDifficulty": {
+		"easy": 1,
+		"medium": 2,
+		"hard": 3
+	},
+
+	"Questions" : [
+		{
+			"id": 1,
+			"category": "Array",
+			"ques" : [
+				{
+					"quesID": 1,
+					"name": "Two Sum",
+					"difficulty": "Easy",
+					"link": ""
+				}, 
+				{
+					"quesID": 2,
+					"name": "Best Time to Buy and Sell Stock",
+					"difficulty": "Easy",
+					"link": ""
+				}, 
+				{
+					"quesID": 3,
+					"name": "Insert Interval",
+					"difficulty": "Medium",
+					"link": ""
+				}, 
+				{
+					"quesID": 4,
+					"name": "3Sum",
+					"difficulty": "Medium",
+					"link": ""
+				}, 
+				{
+					"quesID": 5,
+					"name": "Product of Array Except Self",
+					"difficulty": "Medium",
+					"link": ""
+				}
+			]
+		},
+		{
+			"id": 2,
+			"category": "String",
+			"ques" : [
+				{
+					"quesID": 1,
+					"name": "Valid Palindrome",
+					"difficulty": "Easy",
+					"link": ""
+				}, 
+				{
+					"quesID": 2,
+					"name": "Valid Anagram",
+					"difficulty": "Easy",
+					"link": ""
+				}, 
+				{
+					"quesID": 3,
+					"name": "Longest Substring Without Repeating Characters",
+					"difficulty": "Medium",
+					"link": ""
+				}, 
+				{
+					"quesID": 4,
+					"name": "Longest Palindrome",
+					"difficulty": "Easy",
+					"link": ""
+				}, 
+				{
+					"quesID": 5,
+					"name": "Minimum Window Substring",
+					"difficulty": "Hard",
+					"link": ""
+				}
+			]
+		},
+		{
+			"id": 3,
+			"category": "Graph",
+			"ques" : [
+				{
+					"quesID": 1,
+					"name": "Flood Fill",
+					"difficulty": "Easy",
+					"link": ""
+				}, 
+				{
+					"quesID": 2,
+					"name": "01 Matrix",
+					"difficulty": "Medium",
+					"link": ""
+				}, 
+				{
+					"quesID": 3,
+					"name": "Clone Graph",
+					"difficulty": "Medium",
+					"link": ""
+				}, 
+				{
+					"quesID": 4,
+					"name": "Course Schedule",
+					"difficulty": "Medium",
+					"link": ""
+				}, 
+				{
+					"quesID": 5,
+					"name": "Number of Islands",
+					"difficulty": "Medium",
+					"link": ""
+				}
+			]
+		}
+	]
+
+
 }

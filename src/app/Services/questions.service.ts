@@ -12,7 +12,15 @@ export class QuestionsService {
 
   url = "http://localhost:7000/blind75";
 
+  url_category_ques = "http://localhost:7000/Questions";
+
   getQuestions() : Observable<DSAQues[]> {
     return this.http.get<DSAQues[]>(this.url);
   }
+
+  getCategoryQuestions() : Observable<any> {
+    return this.http.get<any>(this.url_category_ques);
+  }
+
+
 }
