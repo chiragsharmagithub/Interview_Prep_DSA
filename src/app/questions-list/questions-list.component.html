@@ -91,17 +91,45 @@
 			<div 
 				[hidden]="categoryQuesToShow() != catyQues.id" 
 				*ngFor="let ques of catyQues.ques"
-				class="m-0 p-0"
+				class="m-0 p-0 card-design-2"
 				>
-					<button class="btn btn-primary m-1 col-7">
+					<div class="p-0 col-1 text-center text-start" 
+						 style="display: inline-block; vertical-align: baseline;">						{{ ques.quesID }}
+					</div>
+					<div class="col-10 m-0 p-2" 
+						 style="display: inline-block;">
+						<div class="fst-normal" style="color: #006ad4" >
+							{{ ques.name }}
+						</div>
+						<div *ngIf="ques.difficulty == 'Easy'"
+							 class="easy-class" 
+							 style="font-size: 15px;">
+							{{ ques.difficulty }}
+						</div>
+						<div *ngIf="ques.difficulty == 'Medium'"
+							 class="medium-class" 
+							 style="font-size: 15px;">
+							{{ ques.difficulty }}
+						</div>
+						<div *ngIf="ques.difficulty == 'Hard'"
+							 class="hard-class" 
+							 style="font-size: 15px;">
+							{{ ques.difficulty }}
+						</div>
+						
+					</div>
+					<div class="col-1" style="display: inline-block;">
+						<img src="../../assets/check-circle.svg">
+					</div>
+					<!-- <button class="btn btn-primary m-1 col-7">
 						{{ ques.name }}
 					</button>
 					<button class="btn btn-success col-3">
 						{{ ques.difficulty }}
 					</button>
 					<button class="btn btn-light col-1">
-						{{ ques.link }}
-					</button>
+						<img src="./../../assets/link-45deg.svg">
+					</button> -->
 			</div>
 		</div>
 
