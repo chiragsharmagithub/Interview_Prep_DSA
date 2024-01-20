@@ -1,47 +1,46 @@
 <div class="container-fluid" style="border: 1px solid blue">
-	<div class="row" style="border: 1px solid red">
-		<div
-			class="col m-0 p-0 .left-menu-design"
-			style="border: 1px solid rgb(148, 148, 0)">
-			<div class="p-4 left-menu-top-design">
-				<h2>Left menu</h2>
-				<p>
-					Let us know your avaibility and we will recommend you a list of
-					questions to do to increase your chances of cracking interviews.
-				</p>
-			</div>
-		</div>
+  <div class="row" style="border: 1px solid red">
+    <div
+      class="col-2 m-0 p-0 .left-menu-design"
+      style="border: 1px solid rgb(148, 148, 0)"
+    >
+      <div class="p-4 left-menu-top-design">
+        <h2>Left menu</h2>
+        <p>
+          Let us know your avaibility and we will recommend you a list of
+          questions to do to increase your chances of cracking interviews.
+        </p>
+      </div>
+    </div>
 
-		<div class="col-sm-6 mx-auto" style="border: 1px solid green">
-			<h1>Grind 75 questions</h1>
-			<p>
-				Customize Leetcode study plans according to your needs. You are
-				recommended to work on the questions in order. Find out WHY?
-			</p>
+    <div class="col-sm-8 mx-auto" style="border: 1px solid green">
+      <h1>Grind 75 questions</h1>
+      <p>
+        Customize Leetcode study plans according to your needs. You are
+        recommended to work on the questions in order. Find out WHY?
+      </p>
 
-			<div class="container-fluid" style="text-align: center">
-				<div class="row p-2 m-0" style="border: 1px solid black">
-					Questions Summary
-				</div>
-				<div class="row p-0 m-0">
-					<div class="col p-2" style="border: 1px solid black">Time needed</div>
-					<div class="col p-2" style="border: 1px solid black">Difficulty</div>
-					<div class="col p-2" style="border: 1px solid black">Topic</div>
-				</div>
-				<div class="row p-2 m-0" style="border: 1px solid black">
-					Completed {{ current_completed_questions }} /
-					{{ total_user_questions }}
-					[Insert one progress bar]
-				</div>
-			</div>
+      <div class="container-fluid" style="text-align: center">
+        <div class="row p-2 m-0" style="border: 1px solid black">
+          Questions Summary
+        </div>
+        <div class="row p-0 m-0">
+          <div class="col p-2" style="border: 1px solid black">Time needed</div>
+          <div class="col p-2" style="border: 1px solid black">Difficulty</div>
+          <div class="col p-2" style="border: 1px solid black">Topic</div>
+        </div>
+        <div class="row p-2 m-0" style="border: 1px solid black">
+          Completed {{ current_completed_questions }} /
+          {{ total_user_questions }}
+          [Insert one progress bar]
+        </div>
+      </div>
 
-		
+      <!-- Main stuff start -->
 
-			<!-- Main stuff start -->
+      <!-- <hr> -->
 
-		<hr>
-
-			<div class="accordion" id="accordionPanelsStayOpenExample">
+      <!-- <div class="accordion" id="accordionPanelsStayOpenExample">
 		<div class="accordion-item">
 			<h2 class="accordion-header">
 			<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -78,50 +77,128 @@
 			</div>
 			</div>
 		</div>
-		</div>
+		</div> -->
 
-		<hr>
+      <hr />
 
-		<!-- Testing zone start -->
+      <!-- Testing zone start -->
 
-		<div *ngFor="let catyQues of category_questions">
-			<div class="card-design mt-5 mb-3 p-3 col-sm-12" (click)="showQuesOfCategory(catyQues.id)"> 
-				{{ catyQues.category }}
-			</div>
-			<div 
-				[hidden]="categoryQuesToShow() != catyQues.id" 
-				*ngFor="let ques of catyQues.ques"
-				class="m-0 p-0 card-design-2"
-				>
-					<div class="p-0 col-1 text-center text-start" 
-						 style="display: inline-block; vertical-align: baseline;">						{{ ques.quesID }}
-					</div>
-					<div class="col-10 m-0 p-2" 
-						 style="display: inline-block;">
-						<div class="fst-normal" style="color: #006ad4" >
-							{{ ques.name }}
-						</div>
-						<div *ngIf="ques.difficulty == 'Easy'"
-							 class="easy-class" 
-							 style="font-size: 15px;">
-							{{ ques.difficulty }}
-						</div>
-						<div *ngIf="ques.difficulty == 'Medium'"
-							 class="medium-class" 
-							 style="font-size: 15px;">
-							{{ ques.difficulty }}
-						</div>
-						<div *ngIf="ques.difficulty == 'Hard'"
-							 class="hard-class" 
-							 style="font-size: 15px;">
-							{{ ques.difficulty }}
-						</div>
-						
-					</div>
-					<div class="col-1" style="display: inline-block;">
-						<img src="../../assets/check-circle.svg">
-					</div>
-					<!-- <button class="btn btn-primary m-1 col-7">
+      <!-- Filters -->
+      <div>
+        <div class="btn-group" role="group" aria-label="Filter Questions">
+          <div class="btn-group" role="group">
+            <button
+              id="btnGroupDropdown1"
+              type="button"
+              class="btn btn-light dropdown-toggle bg-color-white"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ showQuestionsOnPreference }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDropdown1">
+              <li class="dropdown-item">Based on Preferences</li>
+              <li class="dropdown-item">View All Questions</li>
+            </ul>
+          </div>
+
+          <div class="btn-group" role="group">
+            <button
+              id="btnGroupDropdown2"
+              type="button"
+              class="btn btn-light dropdown-toggle bg-color-white"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ questionsOrderByTopics }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDropdown2">
+              <li class="dropdown-item">All Rounded</li>
+              <li class="dropdown-item">Order by Difficulty</li>
+			  <li class="dropdown-item">Order by Topics</li>
+            </ul>
+          </div>
+
+          <div class="btn-group" role="group">
+            <button
+              id="btnGroupDropdown3"
+              type="button"
+              class="btn btn-light dropdown-toggle bg-color-white"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ questionsGroupByTopics }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDropdown3">
+              <li class="dropdown-item">No Grouping</li>
+              <li class="dropdown-item">Group by Week</li>
+			  <li class="dropdown-item">Group by Topics</li>
+			  <li class="dropdown-item">Group by Difficulty</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="btn-group float-end"
+          role="group"
+          aria-label="Filter Questions 2"
+        >
+          <button
+            class="btn btn-light bg-color-white"
+            (click)="hideOrShowTopicStatusChange()"
+          >
+            {{ hideOrShowTopicStatus }}
+          </button>
+        </div>
+      </div>
+
+      <div *ngFor="let catyQues of category_questions">
+        <div
+          class="card-design-1 mt-3 p-3 col-sm-12"
+          (click)="showQuesOfCategory(catyQues.id)"
+        >
+          {{ catyQues.category }}
+        </div>
+        <div
+          [hidden]="categoryQuesToShow() != catyQues.id"
+          *ngFor="let ques of catyQues.ques"
+          class="m-0 p-0 card-design-2"
+        >
+          <div
+            class="p-0 col-1 text-center text-start"
+            style="display: inline-block; vertical-align: baseline"
+          >
+            {{ ques.quesID }}
+          </div>
+          <div class="col-10 m-0 p-2" style="display: inline-block">
+            <div class="fst-normal" style="color: #006ad4">
+              {{ ques.name }}
+            </div>
+            <div
+              *ngIf="ques.difficulty == 'Easy'"
+              class="easy-class"
+              style="font-size: 15px"
+            >
+              {{ ques.difficulty }}
+            </div>
+            <div
+              *ngIf="ques.difficulty == 'Medium'"
+              class="medium-class"
+              style="font-size: 15px"
+            >
+              {{ ques.difficulty }}
+            </div>
+            <div
+              *ngIf="ques.difficulty == 'Hard'"
+              class="hard-class"
+              style="font-size: 15px"
+            >
+              {{ ques.difficulty }}
+            </div>
+          </div>
+          <div class="col-1" style="display: inline-block">
+            <img src="../../assets/check-circle.svg" />
+          </div>
+          <!-- <button class="btn btn-primary m-1 col-7">
 						{{ ques.name }}
 					</button>
 					<button class="btn btn-success col-3">
@@ -130,17 +207,16 @@
 					<button class="btn btn-light col-1">
 						<img src="./../../assets/link-45deg.svg">
 					</button> -->
-			</div>
-		</div>
+        </div>
+      </div>
 
-		<!-- Testing zone end -->
+      <!-- Testing zone end -->
 
+      <hr />
 
-		<hr>
+      <!-- Main stuff till here -->
 
-			<!-- Main stuff till here -->
-
-			<div *ngFor="let ques of DSAQuestions" class="card-design p-3 m-4">
+      <!-- <div *ngFor="let ques of DSAQuestions" class="card-design p-3 m-4">
 				<div>
 					Ques ID = {{ ques.id }}
 					<br />
@@ -148,9 +224,11 @@
 					<br />
 					Question Category: {{ ques.category }}
 				</div>
-			</div>
-		</div>
+			</div> -->
+    </div>
 
-		<h2 class="col-sm-3" style="border: 1px solid pink">Right menu</h2>
-	</div>
+    <h2 class="col-sm-2" style="border: 1px solid rgb(179, 19, 45)">Right menu</h2>
+  </div>
 </div>
+
+<hr />

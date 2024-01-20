@@ -18,11 +18,30 @@ export class QuestionsListComponent implements OnInit {
   category_questions : any;
   showQuestionOfCategory: number = 0;
 
+  // filters
+  // filter 1
+  showQuestionsOnPreference = "Based on Preferences"; 
+  // filter 2
+  questionsOrderByTopics = "Order by Topics";
+  // filter 3
+  questionsGroupByTopics = "Group by Topics";
+  // filter 4
+  hideOrShowTopicStatus = "Show topics";
+
   current_completed_questions = 0;
   total_user_questions = 75;
   
   constructor(private questionsService: QuestionsService) {
 
+  }
+
+  hideOrShowTopicStatusChange() {
+    if(this.hideOrShowTopicStatus == "Show topics") {
+      this.hideOrShowTopicStatus = "Hide topics";
+    }
+    else {
+      this.hideOrShowTopicStatus = "Show topics";
+    }
   }
 
   showQuesOfCategory(id: number) {
