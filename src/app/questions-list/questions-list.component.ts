@@ -30,6 +30,12 @@ export class QuestionsListComponent implements OnInit {
 
   current_completed_questions = 0;
   total_user_questions = 75;
+
+  currentCategoryToShow = 0;
+  currentToggleId = "";
+
+  weeksToPrepare = 0;
+  hoursPerWeekToPrepare = 0;
   
   constructor(private questionsService: QuestionsService) {
 
@@ -42,6 +48,16 @@ export class QuestionsListComponent implements OnInit {
     else {
       this.hideOrShowTopicStatus = "Show topics";
     }
+  }
+
+  showQuesCategory(categoryId: number) {
+    this.currentCategoryToShow = categoryId;
+    this.currentToggleId = "collapse" + categoryId;
+    console.log(this.currentToggleId);
+  }
+
+  currentToggleIdname() {
+    return this.currentToggleId;
   }
 
   showQuesOfCategory(id: number) {

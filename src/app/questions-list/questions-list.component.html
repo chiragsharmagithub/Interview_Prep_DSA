@@ -11,6 +11,30 @@
           questions to do to increase your chances of cracking interviews.
         </p>
       </div>
+
+			<div class="p-4"> 
+				SCHEDULE
+				
+				<div class="mt-2">
+					{{ weeksToPrepare }} weeks
+					<div class="progress mb-2">
+						<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+								 aria-valuemax="100" style="width: 50%;">
+								</div>
+					</div>
+					{{ hoursPerWeekToPrepare }} hours per weeks
+					<div class="progress">
+						<div class="progress-bar" role="progressbar"
+								 style="width: 50%;"
+								 [attr.aria-valuenow]="weeksToPrepare"
+								 aria-valuemin="0" 
+								 aria-valuemax="100">
+								</div>
+					</div>
+				</div>
+			</div>
+			
+
     </div>
 
     <div class="col-sm-8 mx-auto" style="border: 1px solid green">
@@ -38,48 +62,99 @@
 
       <!-- Main stuff start -->
 
-      <!-- <hr> -->
+      <hr />
 
       <!-- <div class="accordion" id="accordionPanelsStayOpenExample">
-		<div class="accordion-item">
-			<h2 class="accordion-header">
-			<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-				Accordion Item #1
-			</button>
-			</h2>
-			<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-			<div class="accordion-body">
-				<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button
+							class="accordion-button"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#panelsStayOpen-collapseOne"
+							aria-expanded="false"
+							aria-controls="panelsStayOpen-collapseOne"
+						>
+							Array
+						</button>
+					</h2>
+					<div
+						id="panelsStayOpen-collapseOne"
+						class="accordion-collapse collapse show"
+					>
+						<div class="accordion-body">
+							<strong>This is the first item's accordion body.</strong> It is
+							shown by default, until the collapse plugin adds the appropriate
+							classes that we use to style each element. These classes control
+							the overall appearance, as well as the showing and hiding via CSS
+							transitions. You can modify any of this with custom CSS or
+							overriding our default variables. It's also worth noting that just
+							about any HTML can go within the <code>.accordion-body</code>,
+							though the transition does limit overflow.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#panelsStayOpen-collapseTwo"
+							aria-expanded="false"
+							aria-controls="panelsStayOpen-collapseTwo"
+						>
+							Accordion Item #2
+						</button>
+					</h2>
+					<div
+						id="panelsStayOpen-collapseTwo"
+						class="accordion-collapse collapse"
+					>
+						<div class="accordion-body">
+							<strong>This is the second item's accordion body.</strong> It is
+							hidden by default, until the collapse plugin adds the appropriate
+							classes that we use to style each element. These classes control
+							the overall appearance, as well as the showing and hiding via CSS
+							transitions. You can modify any of this with custom CSS or
+							overriding our default variables. It's also worth noting that just
+							about any HTML can go within the <code>.accordion-body</code>,
+							though the transition does limit overflow.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#panelsStayOpen-collapseThree"
+							aria-expanded="false"
+							aria-controls="panelsStayOpen-collapseThree"
+						>
+							Accordion Item #3
+						</button>
+					</h2>
+					<div
+						id="panelsStayOpen-collapseThree"
+						class="accordion-collapse collapse"
+					>
+						<div class="accordion-body">
+							<strong>This is the third item's accordion body.</strong> It is
+							hidden by default, until the collapse plugin adds the appropriate
+							classes that we use to style each element. These classes control
+							the overall appearance, as well as the showing and hiding via CSS
+							transitions. You can modify any of this with custom CSS or
+							overriding our default variables. It's also worth noting that just
+							about any HTML can go within the <code>.accordion-body</code>,
+							though the transition does limit overflow.
+						</div>
+					</div>
+				</div>
 			</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-				Accordion Item #2
-			</button>
-			</h2>
-			<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-			<div class="accordion-body">
-				<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-			</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-				Accordion Item #3
-			</button>
-			</h2>
-			<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-			<div class="accordion-body">
-				<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-			</div>
-			</div>
-		</div>
-		</div> -->
 
-      <hr />
+			<hr /> -->
 
       <!-- Testing zone start -->
 
@@ -115,7 +190,7 @@
             <ul class="dropdown-menu" aria-labelledby="btnGroupDropdown2">
               <li class="dropdown-item">All Rounded</li>
               <li class="dropdown-item">Order by Difficulty</li>
-			  <li class="dropdown-item">Order by Topics</li>
+              <li class="dropdown-item">Order by Topics</li>
             </ul>
           </div>
 
@@ -132,8 +207,8 @@
             <ul class="dropdown-menu" aria-labelledby="btnGroupDropdown3">
               <li class="dropdown-item">No Grouping</li>
               <li class="dropdown-item">Group by Week</li>
-			  <li class="dropdown-item">Group by Topics</li>
-			  <li class="dropdown-item">Group by Difficulty</li>
+              <li class="dropdown-item">Group by Topics</li>
+              <li class="dropdown-item">Group by Difficulty</li>
             </ul>
           </div>
         </div>
@@ -156,49 +231,50 @@
           class="card-design-1 mt-3 p-3 col-sm-12"
           (click)="showQuesOfCategory(catyQues.id)"
         >
-          {{ catyQues.category }}
+          <h5>
+            {{ catyQues.category }}
+          </h5>
         </div>
-        <div
-          [hidden]="categoryQuesToShow() != catyQues.id"
-          *ngFor="let ques of catyQues.ques"
-          class="m-0 p-0 card-design-2"
-        >
-          <div
-            class="p-0 col-1 text-center text-start"
-            style="display: inline-block; vertical-align: baseline"
-          >
-            {{ ques.quesID }}
-          </div>
-          <div class="col-10 m-0 p-2" style="display: inline-block">
-            <div class="fst-normal" style="color: #006ad4">
-              {{ ques.name }}
-            </div>
+
+        <!-- [hidden]="categoryQuesToShow() != catyQues.id" -->
+        <div *ngFor="let ques of catyQues.ques" class="m-0 p-0 card-design-2">
+          <div>
             <div
-              *ngIf="ques.difficulty == 'Easy'"
-              class="easy-class"
-              style="font-size: 15px"
+              class="p-0 col-1 text-center text-start"
+              style="display: inline-block; vertical-align: baseline"
             >
-              {{ ques.difficulty }}
+              {{ ques.quesID }}
             </div>
-            <div
-              *ngIf="ques.difficulty == 'Medium'"
-              class="medium-class"
-              style="font-size: 15px"
-            >
-              {{ ques.difficulty }}
+            <div class="col-10 m-0 p-2" style="display: inline-block">
+              <div class="fst-normal" style="color: #006ad4">
+                {{ ques.name }}
+              </div>
+              <div
+                *ngIf="ques.difficulty == 'Easy'"
+                class="easy-class"
+                style="font-size: 15px"
+              >
+                {{ ques.difficulty }}
+              </div>
+              <div
+                *ngIf="ques.difficulty == 'Medium'"
+                class="medium-class"
+                style="font-size: 15px"
+              >
+                {{ ques.difficulty }}
+              </div>
+              <div
+                *ngIf="ques.difficulty == 'Hard'"
+                class="hard-class"
+                style="font-size: 15px"
+              >
+                {{ ques.difficulty }}
+              </div>
             </div>
-            <div
-              *ngIf="ques.difficulty == 'Hard'"
-              class="hard-class"
-              style="font-size: 15px"
-            >
-              {{ ques.difficulty }}
+            <div class="col-1" style="display: inline-block">
+              <img src="../../assets/check-circle.svg" />
             </div>
-          </div>
-          <div class="col-1" style="display: inline-block">
-            <img src="../../assets/check-circle.svg" />
-          </div>
-          <!-- <button class="btn btn-primary m-1 col-7">
+            <!-- <button class="btn btn-primary m-1 col-7">
 						{{ ques.name }}
 					</button>
 					<button class="btn btn-success col-3">
@@ -207,6 +283,7 @@
 					<button class="btn btn-light col-1">
 						<img src="./../../assets/link-45deg.svg">
 					</button> -->
+          </div>
         </div>
       </div>
 
@@ -225,9 +302,41 @@
 					Question Category: {{ ques.category }}
 				</div>
 			</div> -->
+
+      <h1>Accordion below</h1>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-3" *ngFor="let questions of category_questions">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              [attr.data-bs-target]="currentToggleIdname()"
+              aria-expanded="true"
+							[attr.aria-controls]="currentToggleIdname()"
+							(click)="showQuesCategory(questions.id)"
+            >
+							{{ questions.category }}
+						</button>
+          </h2>
+					<div [id]="currentToggleIdname()"
+							*ngFor="let ques of questions.ques"
+							 class="accordion-collapse collapse show" 
+							 [attr.aria-labelledby]="currentToggleIdname()"
+							 data-bs-parent="accordionExample">
+							<div class="accordion-body">
+								{{ ques.name }}
+							</div>
+					</div>
+
+        </div>
+      </div>
     </div>
 
-    <h2 class="col-sm-2" style="border: 1px solid rgb(179, 19, 45)">Right menu</h2>
+    <h2 class="col-sm-2" style="border: 1px solid rgb(179, 19, 45)">
+      Right menu
+    </h2>
   </div>
 </div>
 
