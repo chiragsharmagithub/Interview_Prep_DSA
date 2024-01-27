@@ -20,6 +20,12 @@ export class QuestionsListComponent implements OnInit {
   category_questions : any;
   showQuestionOfCategory: number = 0;
 
+  totalTimeToPrepare = 0;
+  getTimeToPrepare(data: number) {
+    this.totalTimeToPrepare = data;
+    console.log("Question List component: Time to prepare = " + this.totalTimeToPrepare);
+  }
+
   // filters
   // filter 1
   showQuestionsOnPreference = "Based on Preferences"; 

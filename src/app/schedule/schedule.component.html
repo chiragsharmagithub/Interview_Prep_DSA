@@ -10,6 +10,16 @@
   SCHEDULE
 
   <div class="mt-2">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter # of weeks"
+      [(ngModel)]="weeksToPrepare"
+      (ngModelChange)="doChanges($event, 'weeks')"
+    />
+
+    <br />
+
     {{ weeksToPrepare }} weeks
     <div class="progress mb-2">
       <div
@@ -21,6 +31,14 @@
         style="width: 50%"
       ></div>
     </div>
+
+    <input
+      type="text"
+      class="form-control mt-4 mb-4"
+      [(ngModel)]="hoursPerWeekToPrepare"
+      (ngModelChange)="doChanges($event, 'hours')"
+      placeholder="Enter # of hours/week"
+    />
     {{ hoursPerWeekToPrepare }} hours per weeks
     <div class="progress">
       <div
@@ -32,5 +50,6 @@
         aria-valuemax="100"
       ></div>
     </div>
+
   </div>
 </div>

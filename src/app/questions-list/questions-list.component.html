@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-2 m-0 p-0 .left-menu-design" style="border: 1px solid red">
-      <app-schedule></app-schedule>
+      <app-schedule (timeToPrepare)="getTimeToPrepare($event)"></app-schedule>
     </div>
 
     <div class="col p-4" style="border: 1px solid green">
@@ -16,7 +16,13 @@
           Questions Summary
         </div>
         <div class="row p-0 m-0">
-          <div class="col p-2" style="border: 1px solid black">Time needed</div>
+          <div class="col p-2" style="border: 1px solid black">
+			Time needed
+			<br>
+			<div *ngIf="totalTimeToPrepare != 0">
+				{{ totalTimeToPrepare }} hours
+			</div>
+		</div>
           <div class="col p-2" style="border: 1px solid black">Difficulty</div>
           <div class="col p-2" style="border: 1px solid black">Topic</div>
         </div>
