@@ -1,0 +1,36 @@
+<div class="p-4 left-menu-top-design">
+  <h2>Left menu</h2>
+  <p>
+    Let us know your avaibility and we will recommend you a list of questions to
+    do to increase your chances of cracking interviews.
+  </p>
+</div>
+
+<div class="p-4">
+  SCHEDULE
+
+  <div class="mt-2">
+    {{ weeksToPrepare }} weeks
+    <div class="progress mb-2">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        aria-valuenow="50"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: 50%"
+      ></div>
+    </div>
+    {{ hoursPerWeekToPrepare }} hours per weeks
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        style="width: 50%"
+        [attr.aria-valuenow]="weeksToPrepare"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionsListComponent } from './questions-list/questions-list.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ExtrarightComponent } from './extraright/extraright.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,9 @@ import { QuestionsListComponent } from './questions-list/questions-list.componen
     CommonModule, 
     RouterOutlet, 
     HttpClientModule,
-    QuestionsListComponent
+    QuestionsListComponent,
+    ScheduleComponent,
+    ExtrarightComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

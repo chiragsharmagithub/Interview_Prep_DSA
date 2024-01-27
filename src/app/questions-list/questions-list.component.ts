@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 //
 import { DSAQues } from '../Models/DSAQues.Model';
 import { QuestionsService } from '../Services/questions.service';
+import { ScheduleComponent } from '../schedule/schedule.component';
+import { ExtrarightComponent } from '../extraright/extraright.component';
 
 
 @Component({
   selector: 'app-questions-list',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, ScheduleComponent, ExtrarightComponent],
   templateUrl: './questions-list.component.html',
   styleUrl: './questions-list.component.css'
 })
